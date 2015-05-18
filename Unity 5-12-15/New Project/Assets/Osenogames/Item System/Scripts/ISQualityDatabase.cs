@@ -8,6 +8,6 @@ namespace OsenoGames.ItemSystem
 	public class ISQualityDatabase : ScriptableObject
 	{
 		//[SerializeField]
-		List<ISQuality> db = new List<ISQuality>();
+		public List<ISQuality> dataBase = new List<ISQuality>();
 	}
 }

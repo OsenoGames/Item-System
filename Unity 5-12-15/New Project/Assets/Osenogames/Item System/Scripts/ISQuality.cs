@@ -11,7 +11,7 @@ namespace OsenoGames.ItemSystem
 
 		#region IISQuality implementation
 
-		ISQuality()
+		public ISQuality()
 		{
 			_name = "Common";
 			_icon = new Sprite();
