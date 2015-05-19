@@ -68,12 +68,11 @@ namespace OsenoGames.ItemSystem.Editor
 				if(selectedItem==null)
 					return;
 
-				qualityDatabase.dataBase.Add(selectedItem);
-
+				qualityDatabase.Add(selectedItem);
 				selectedItem = new ISQuality();
 
-				ISQualityDatabaseEditor window = EditorWindow.GetWindow<ISQualityDatabaseEditor>();
-				window.Close();
+				//ISQualityDatabaseEditor window = EditorWindow.GetWindow<ISQualityDatabaseEditor>();
+				//window.Close();
 			}
 
 		}
