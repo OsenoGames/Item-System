@@ -9,7 +9,7 @@ namespace OsenoGames.ItemSystem
 
 	public class ISQualityDatabase : ScriptableObject
 	{
-		[SerializeField]
+	//	[SerializeField]
 		List<ISQuality> dataBase = new List<ISQuality>();
 	
 		public void Add(ISQuality item)
