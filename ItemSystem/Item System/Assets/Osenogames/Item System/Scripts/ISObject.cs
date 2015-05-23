@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace OsenoGames.ItemSystem
 {
-
+	[System.Serializable]
 	public class ISObject : IISObject 
 	{
 		[SerializeField]Sprite  _icon;

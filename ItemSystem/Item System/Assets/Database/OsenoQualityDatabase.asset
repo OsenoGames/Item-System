@@ -11,3 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5fc06ba48782bb4a8fe7c1750344c63, type: 3}
   m_Name: OsenoQualityDatabase
   m_EditorClassIdentifier: 
+  dataBase:
+  - _name: ok
+    _icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - _name: bg
+    _icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}

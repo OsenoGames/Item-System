@@ -7,15 +7,14 @@ namespace OsenoGames.ItemSystem.Editor
 	public partial class ISQualityDatabaseEditor : EditorWindow
 	{
 		ISQualityDatabase qualityDatabase;
-		//ISQuality selectedItem;
 		Texture2D selectedTexture;
 		int selectedIndex = -1;  // index for the selected icon in scroll view
 		Vector2 _scrollPos;      // scroll position for the list view
 
 		const int SPRITE_BUTTON_SIZE = 46;
-		const string DATABASE_FILE_NAME = @"OsenoQualityDatabase.asset";
-		const string DATABASE_FOLDER_NAME = @"Database";
-		const string DATABASE_FULL_PATH = @"Assets/"+DATABASE_FOLDER_NAME+"/"+DATABASE_FILE_NAME;
+		const string DATABASE_NAME = @"OsenoQualityDatabase.asset";
+		const string DATABASE_PATH = @"Database";
+		const string DATABASE_FULL_PATH = @"Assets/"+DATABASE_PATH+"/"+DATABASE_NAME;
 
 		[MenuItem("Oseno/Database/Quality Editor %#i")]
 		public static void Init()
@@ -28,23 +27,16 @@ namespace OsenoGames.ItemSystem.Editor
 
 		void OnEnable()
 		{
-			qualityDatabase = AssetDatabase.LoadAssetAtPath(DATABASE_FULL_PATH, typeof(ISQualityDatabase)) as ISQualityDatabase;
-
-			if(qualityDatabase == null)
-			{
-				if(!AssetDatabase.IsValidFolder("Assets/"+DATABASE_FOLDER_NAME))
-					AssetDatabase.CreateFolder("Assets", DATABASE_FOLDER_NAME);
-				qualityDatabase = ScriptableObject.CreateInstance<ISQualityDatabase>();
-				AssetDatabase.CreateAsset(qualityDatabase,DATABASE_FULL_PATH);
-				AssetDatabase.SaveAssets();
-				AssetDatabase.Refresh();
-			}
-			//selectedItem = new ISQuality();
+			qualityDatabase = ScriptableObject.CreateInstance<ISQualityDatabase>();
+			qualityDatabase = qualityDatabase.GetDatabase<ISQualityDatabase>(DATABASE_PATH, DATABASE_NAME);
 		}
 		void OnGUI()
 		{
+			if(qualityDatabase == null)
+			{
+				Debug.LogWarning("Quality database not loaded");
+			}
 			ListView();
-			//AddQualityToDatabase();
 			GUILayout.BeginHorizontal("box", GUILayout.ExpandWidth(true));
 			BottomBar();
 			GUILayout.EndHorizontal();
