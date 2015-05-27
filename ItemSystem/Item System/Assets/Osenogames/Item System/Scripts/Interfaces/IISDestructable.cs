@@ -3,7 +3,6 @@ using System.Collections;
 
 namespace OsenoGames.ItemSystem
 {
-
 	public interface IISDestructable
 	{
 		int Durability { get; }

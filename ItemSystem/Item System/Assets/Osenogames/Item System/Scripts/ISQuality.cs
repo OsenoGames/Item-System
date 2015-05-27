@@ -9,8 +9,6 @@ namespace OsenoGames.ItemSystem
 		[SerializeField]string _name;
 		[SerializeField]Sprite _icon;
 
-		#region IISQuality implementation
-
 		public ISQuality()
 		{
 			_name = "";
@@ -33,11 +31,5 @@ namespace OsenoGames.ItemSystem
 			get {return _icon;}
 			set {_icon = value;}
 		}
-
-		#endregion
-
-
-
-
 	}
 }

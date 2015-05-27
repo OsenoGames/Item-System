@@ -3,9 +3,8 @@ using System.Collections;
 
 namespace OsenoGames.ItemSystem
 {
-
-	public class IISQameObject
+	public interface IISQameObject
 	{
-		GameObject Prefab {get; set;}
+		GameObject Prefab {get;}
 	}
 }

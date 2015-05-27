@@ -3,7 +3,6 @@ using System.Collections;
 
 namespace OsenoGames.ItemSystem
 {
-
 	public interface IISEquipmentSlot 
 	{
 		string Name {get; set;}

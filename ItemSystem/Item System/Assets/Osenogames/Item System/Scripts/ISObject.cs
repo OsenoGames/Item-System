@@ -12,8 +12,6 @@ namespace OsenoGames.ItemSystem
 		[SerializeField]int _burden;
 		[SerializeField]ISQuality _quality;
 
-		#region IISObject implementation
-
 		public string Name 
 		{
 			get {return _name;}
@@ -43,7 +41,5 @@ namespace OsenoGames.ItemSystem
 			get {return _quality;}
 			set {_quality = value;}
 		}
-
-		#endregion
 	}
 }

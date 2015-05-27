@@ -9,7 +9,11 @@ namespace OsenoGames.ItemSystem
 		[SerializeField] string _name;
 		[SerializeField] Sprite _icon;
 
-		#region IISEquipmentSlot implementation
+		public ISEquipmentSlot()
+		{
+			_name = "Name Me";
+			_icon = new Sprite();
+		}
 
 		public string Name 
 		{
@@ -22,9 +26,5 @@ namespace OsenoGames.ItemSystem
 			get {return _icon;}
 			set {_icon = value;}
 		}
-
-		#endregion
-
-
 	}
 }

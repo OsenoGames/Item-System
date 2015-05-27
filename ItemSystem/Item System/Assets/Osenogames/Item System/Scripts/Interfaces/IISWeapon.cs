@@ -3,9 +3,10 @@ using System.Collections;
 
 namespace OsenoGames.ItemSystem
 {
-	public interface IISQuality
+
+	public interface IISWeapon 
 	{
-		string Name {get; set;}
-		Sprite Icon {get; set;}
+		int MinDamage {get; set;}
+		int Attack();
 	}
 }
