@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5fc06ba48782bb4a8fe7c1750344c63, type: 3}
-  m_Name: OsenoQualityDatabase
+  m_Script: {fileID: 11500000, guid: c32676f44fb72064081c72eb01e7164c, type: 3}
+  m_Name: OsenoWeaponDatabase
   m_EditorClassIdentifier: 
   dataBase: []

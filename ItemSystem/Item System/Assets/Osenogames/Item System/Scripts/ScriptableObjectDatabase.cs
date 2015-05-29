@@ -54,7 +54,7 @@ namespace OsenoGames
 
 
 
-		public U GetDatabase<U>(string dbPath, string dbName) where U : ScriptableObject
+		public static U GetDatabase<U>(string dbPath, string dbName) where U : ScriptableObject
 		{
 			string dbFullPath = @"Assets/"+dbPath+"/"+dbName;
 

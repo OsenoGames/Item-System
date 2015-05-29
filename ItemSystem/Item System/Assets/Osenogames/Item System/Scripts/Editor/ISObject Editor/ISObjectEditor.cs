@@ -6,8 +6,13 @@ namespace OsenoGames.ItemSystem.Editor
 {
 	public partial class ISObjectEditor : EditorWindow 
 	{
+		ISWeaponDatabase database;
 
-		[MenuItem("Oseno/Database/Item System Editor %#i")]
+		const string DATABASE_NAME = @"OsenoWeaponDatabase.asset";
+		const string DATABASE_PATH = @"Database";
+		const string DATABASE_FULL_PATH = @"Assets/"+DATABASE_PATH+"/"+DATABASE_NAME;
+
+		[MenuItem("OsenoGames/Database/Item System Editor %#i")]
 		public static void Init()
 		{
 			ISObjectEditor window = EditorWindow.GetWindow<ISObjectEditor>();
@@ -15,9 +20,10 @@ namespace OsenoGames.ItemSystem.Editor
 			window.title = "Item System";
 			window.Show();
 		}
-		void OnEable ()
+		void OnEnable ()
 		{
-
+			if(database == null)
+				database = ISWeaponDatabase.GetDatabase<ISWeaponDatabase>(DATABASE_PATH, DATABASE_NAME);
 		}
 
 		void OnGUI()

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 namespace OsenoGames.ItemSystem
@@ -15,7 +16,7 @@ namespace OsenoGames.ItemSystem
 		public ISWeapon()
 		{
 			_equipmentSlot = new ISEquipmentSlot();
-			_prefab = new GameObject();
+
 		}
 
 		public ISWeapon(int durability, int maxDurability, ISEquipmentSlot equipmentSlot, GameObject prefab)
@@ -84,5 +85,11 @@ namespace OsenoGames.ItemSystem
 		{
 			get{return _prefab;}
 		}
+
+		public void OnGUI()
+		{
+			Name = EditorGUILayout.TextField("Name: ", Name);
+		}
+
 	}
 }
