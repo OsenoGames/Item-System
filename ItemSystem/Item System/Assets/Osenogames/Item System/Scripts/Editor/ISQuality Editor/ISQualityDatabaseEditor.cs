@@ -14,7 +14,7 @@ namespace OsenoGames.ItemSystem.Editor
 		const int SPRITE_BUTTON_SIZE = 46;
 		const string DATABASE_NAME = @"OsenoQualityDatabase.asset";
 		const string DATABASE_PATH = @"Database";
-		const string DATABASE_FULL_PATH = @"Assets/"+DATABASE_PATH+"/"+DATABASE_NAME;
+		//const string DATABASE_FULL_PATH = @"Assets/"+DATABASE_PATH+"/"+DATABASE_NAME;
 
 		[MenuItem("OsenoGames/Database/Quality Editor %#w")]
 		public static void Init()
@@ -27,7 +27,7 @@ namespace OsenoGames.ItemSystem.Editor
 
 		void OnEnable()
 		{
-			if(qualityDatabase== null)
+			if(qualityDatabase == null)
 				qualityDatabase = ISQualityDatabase.GetDatabase<ISQualityDatabase>(DATABASE_PATH, DATABASE_NAME);
 		}
 		void OnGUI()

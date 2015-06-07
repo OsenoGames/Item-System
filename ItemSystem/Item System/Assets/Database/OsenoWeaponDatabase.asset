@@ -11,4 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32676f44fb72064081c72eb01e7164c, type: 3}
   m_Name: OsenoWeaponDatabase
   m_EditorClassIdentifier: 
-  dataBase: []
+  dataBase:
+  - _name: sword
+    _icon: {fileID: 0}
+    _value: 2
+    _burden: 1
+    _quality:
+      _name: Common
+      _icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    _minDamage: 1
+    _durability: 1
+    _maxDruability: 1
+    _prefab: {fileID: 0}

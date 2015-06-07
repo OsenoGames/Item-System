@@ -10,11 +10,11 @@ namespace OsenoGames.ItemSystem.Editor
 		void ItemDetails()
 		{
 			GUILayout.BeginVertical("Box", GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
-			GUILayout.BeginHorizontal(GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
+			GUILayout.BeginVertical(GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
 			if(showNewWeaponDetails)
 				DisplayNewWeapon();
 
-			GUILayout.EndHorizontal();
+			GUILayout.EndVertical();
 
 
 			GUILayout.BeginHorizontal(GUILayout.ExpandWidth(true));
@@ -25,9 +25,8 @@ namespace OsenoGames.ItemSystem.Editor
 		void DisplayNewWeapon()
 		{
 			tempWeapon.OnGUI();
-
-
 		}
+
 		void DisplayButtons()
 		{
 			if(!showNewWeaponDetails)
@@ -43,6 +42,12 @@ namespace OsenoGames.ItemSystem.Editor
 				if (GUILayout.Button("Save"))
 				{
 					showNewWeaponDetails =false;
+/*					string DATABASE_NAME = @"OsenoQualityDatabase.asset";
+					string DATABASE_PATH = @"Database";
+					ISQualityDatabase qdb;
+					qdb = ISQualityDatabase.GetDatabase<ISQualityDatabase>(DATABASE_PATH, DATABASE_NAME);
+					tempWeapon.Quality = qdb.Get(tempWeapon.SelectedQualityID);
+*/					database.Add(tempWeapon);
 					tempWeapon = null;
 				}
 				

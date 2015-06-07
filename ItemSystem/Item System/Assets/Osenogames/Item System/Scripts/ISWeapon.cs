@@ -86,9 +86,26 @@ namespace OsenoGames.ItemSystem
 			get{return _prefab;}
 		}
 
-		public void OnGUI()
+		public override void OnGUI()
 		{
-			Name = EditorGUILayout.TextField("Name: ", Name);
+			base.OnGUI();
+
+			_minDamage = System.Convert.ToInt32(EditorGUILayout.TextField("Minimum Damage", _minDamage.ToString()));
+			_durability = System.Convert.ToInt32(EditorGUILayout.TextField("Durability", _durability.ToString()));
+			_maxDruability = System.Convert.ToInt32(EditorGUILayout.TextField("Max Durability", _maxDruability.ToString()));
+
+			DisplayEquipmentSlot();
+			DisplayPrefab();
+		}
+
+		public void DisplayEquipmentSlot()
+		{
+			GUILayout.Label("Equipment Slot");
+		}
+
+		public void DisplayPrefab()
+		{
+			GUILayout.Label("Perfab");
 		}
 
 	}
