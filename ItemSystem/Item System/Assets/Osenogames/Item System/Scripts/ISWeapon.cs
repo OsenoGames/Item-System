@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEditor;
 using System.Collections;
 
@@ -105,7 +105,7 @@ namespace OsenoGames.ItemSystem
 
 		public void DisplayPrefab()
 		{
-			GUILayout.Label("Perfab");
+            _prefab = EditorGUILayout.ObjectField("Perfab", _prefab, typeof(GameObject), false) as GameObject;
 		}
 
 	}

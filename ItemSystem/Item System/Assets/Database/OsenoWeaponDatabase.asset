@@ -23,3 +23,14 @@ MonoBehaviour:
     _durability: 1
     _maxDruability: 1
     _prefab: {fileID: 0}
+  - _name: 
+    _icon: {fileID: 0}
+    _value: 0
+    _burden: 0
+    _quality:
+      _name: 111
+      _icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    _minDamage: 0
+    _durability: 0
+    _maxDruability: 0
+    _prefab: {fileID: 0}
