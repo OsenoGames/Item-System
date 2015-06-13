@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 namespace OsenoGames.ItemSystem
@@ -8,6 +8,7 @@ namespace OsenoGames.ItemSystem
 	{
 		[SerializeField] string _name;
 		[SerializeField] Sprite _icon;
+
 
 		public ISEquipmentSlot()
 		{

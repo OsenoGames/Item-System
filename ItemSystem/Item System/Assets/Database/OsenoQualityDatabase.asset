@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: OsenoQualityDatabase
   m_EditorClassIdentifier: 
   dataBase:
-  - _name: Poor
+  - _name: good
     _icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}

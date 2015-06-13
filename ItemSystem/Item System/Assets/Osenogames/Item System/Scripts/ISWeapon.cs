@@ -5,13 +5,15 @@ using System.Collections;
 namespace OsenoGames.ItemSystem
 {
 	[System.Serializable]
-	public class ISWeapon : ISObject, IISWeapon, IISDestructable, IISEquipable, IISQameObject 
+	public class ISWeapon : ISObject, IISWeapon, IISDestructable, IISQameObject 
 	{
 		[SerializeField] int _minDamage;
 		[SerializeField] int _durability;
 		[SerializeField] int _maxDruability;
 		[SerializeField] ISEquipmentSlot _equipmentSlot;
 		[SerializeField] GameObject _prefab;
+
+		public EquipmentSlot equipmentSlot;
 
 		public ISWeapon()
 		{
@@ -76,11 +78,6 @@ namespace OsenoGames.ItemSystem
 			get{return _equipmentSlot;}
 		}
 
-		public bool Equip()
-		{
-			throw new System.NotImplementedException ();
-		}
-
 		public GameObject Prefab
 		{
 			get{return _prefab;}
@@ -100,7 +97,7 @@ namespace OsenoGames.ItemSystem
 
 		public void DisplayEquipmentSlot()
 		{
-			GUILayout.Label("Equipment Slot");
+			equipmentSlot = (EquipmentSlot)EditorGUILayout.EnumPopup("Equipment Slot", equipmentSlot);
 		}
 
 		public void DisplayPrefab()
